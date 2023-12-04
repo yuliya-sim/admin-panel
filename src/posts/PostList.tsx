@@ -78,7 +78,7 @@ const PostListMobileActions = () => (
 const PostListMobile = () => (
     <InfiniteList
         filters={postFilter}
-        sort={{ field: 'published_at', order: 'DESC' }}
+        sort={{ field: 'published', order: 'DESC' }}
         exporter={exporter}
         actions={<PostListMobileActions />}
     >
@@ -86,7 +86,7 @@ const PostListMobile = () => (
             primaryText={record => record.title}
             secondaryText={record => `${record.views} views`}
             tertiaryText={record =>
-                new Date(record.published_at).toLocaleDateString()
+                new Date(record.published).toLocaleDateString()
             }
         />
     </InfiniteList>
@@ -154,7 +154,7 @@ const tagSort = { field: 'name.en', order: 'ASC' };
 const PostListDesktop = () => (
     <List
         filters={postFilter}
-        sort={{ field: 'published_at', order: 'DESC' }}
+        sort={{ field: 'published', order: 'DESC' }}
         exporter={exporter}
         actions={<PostListActions />}
     >
@@ -167,7 +167,7 @@ const PostListDesktop = () => (
             <TextField source="id" />
             <TextField source="title" cellClassName="title" />
             <DateField
-                source="published_at"
+                source="published"
                 sortByOrder="DESC"
                 cellClassName="publishedAt"
             />

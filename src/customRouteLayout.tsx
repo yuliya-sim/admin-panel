@@ -6,7 +6,7 @@ import {
     Title,
 } from 'react-admin';
 
-const sort = { field: 'published_at', order: 'DESC' };
+const sort = { field: 'published', order: 'DESC' };
 
 const CustomRouteLayout = ({ title = 'Posts' }) => {
     useAuthenticated();
