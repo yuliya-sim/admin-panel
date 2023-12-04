@@ -20,7 +20,8 @@
     "ra-language-french": "^4.16.1",
     "react": "^18.2.0",
     "react-admin": "^4.16.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.3"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
