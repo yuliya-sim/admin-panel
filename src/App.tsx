@@ -8,6 +8,7 @@ import CustomRouteNoLayout from './customRouteNoLayout';
 import dataProvider from './dataProvider';
 import i18nProvider from './i18nProvider';
 import Layout from './Layout';
+import './App.css';
 
 import tags from './tags';
 import posts from './posts';
