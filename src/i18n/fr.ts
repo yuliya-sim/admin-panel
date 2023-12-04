@@ -85,4 +85,47 @@ export default {
             security: 'Sécurité',
         },
     },
+    pos: {
+        search: 'Rechercher',
+        configuration: 'Configuration',
+        language: 'Langue',
+        theme: {
+            name: 'Theme',
+            light: 'Clair',
+            dark: 'Obscur',
+        },
+        dashboard: {
+            monthly_revenue: 'CA à 30 jours',
+            month_history: "Chiffre d'affaire sur 30 jours",
+            new_orders: 'Nouvelles commandes',
+            pending_reviews: 'Commentaires à modérer',
+            all_reviews: 'Voir tous les commentaires',
+            new_customers: 'Nouveaux clients',
+            all_customers: 'Voir tous les clients',
+            pending_orders: 'Commandes à traiter',
+            order: {
+                items:
+                    'par %{customer_name}, un poster |||| par %{customer_name}, %{nb_items} posters',
+            },
+            welcome: {
+                title: 'Bienvenue sur la démo admin',
+                subtitle:
+                    "Ceci est le démo. ",
+
+            },
+        },
+        menu: {
+            sales: 'Ventes',
+            catalog: 'Catalogue',
+            customers: 'Clients',
+        },
+        events: {
+            review: {
+                title: 'Commente sur "%{product}"',
+            },
+            order: {
+                title: 'Commande 1 poster |||| Commande %{smart_count} posters',
+            },
+        },
+    },
 };
