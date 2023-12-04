@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useGetList } from 'react-admin';
 
 const CustomRouteNoLayout = ({ title = 'Posts' }) => {

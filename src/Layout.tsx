@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { ReactQueryDevtools } from 'react-query/devtools';
-import { AppBar, Layout, InspectorButton, TitlePortal } from 'react-admin';
+
+import { AppBar, Layout, InspectorButton, TitlePortal, LayoutProps } from 'react-admin';
+import { JSX } from 'react/jsx-runtime';
 
 const MyAppBar = () => (
     <AppBar>
@@ -9,12 +9,8 @@ const MyAppBar = () => (
     </AppBar>
 );
 
-export default props => (
+export default (props: JSX.IntrinsicAttributes & LayoutProps) => (
     <>
         <Layout {...props} appBar={MyAppBar} />
-        <ReactQueryDevtools
-            initialIsOpen={false}
-            toggleButtonProps={{ style: { width: 20, height: 30 } }}
-        />
     </>
 );
