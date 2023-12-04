@@ -31,7 +31,7 @@ export default {
                 authors: 'Auteurs',
                 'authors.user_id': 'Nom',
                 'authors.role': 'Rôle',
-                published_at: 'Publié le',
+                published: 'Publié le',
                 teaser: 'Description',
                 tags: 'Catégories',
                 title: 'Titre',

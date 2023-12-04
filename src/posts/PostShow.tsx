@@ -48,7 +48,7 @@ const PostShow = () => {
                         <TextField source="title" />
                         {controllerProps.record &&
                             controllerProps.record.title ===
-                                'Fusce massa lorem, pulvinar a posuere ut, accumsan ac nisi' && (
+                            'Fusce massa lorem, pulvinar a posuere ut, accumsan ac nisi' && (
                                 <TextField source="teaser" />
                             )}
                         <ArrayField source="backlinks">
@@ -79,7 +79,7 @@ const PostShow = () => {
                                 />
                             </SingleFieldList>
                         </ReferenceArrayField>
-                        <DateField source="published_at" />
+                        <DateField source="published" />
                         <SelectField
                             source="category"
                             choices={[

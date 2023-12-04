@@ -162,7 +162,7 @@ const PostEdit = () => {
                                 <FormDataConsumer>
                                     {({ scopedFormData, getSource, ...rest }) =>
                                         scopedFormData &&
-                                        scopedFormData.user_id ? (
+                                            scopedFormData.user_id ? (
                                             <SelectInput
                                                 source={getSource('role')}
                                                 choices={[
@@ -209,7 +209,7 @@ const PostEdit = () => {
                             <TextInput source="url" validate={required()} />
                         </SimpleFormIterator>
                     </ArrayInput>
-                    <DateInput source="published_at" />
+                    <DateInput source="published" />
                     <SelectInput
                         create={
                             <CreateCategory

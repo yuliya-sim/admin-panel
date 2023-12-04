@@ -139,7 +139,7 @@ const PostCreate = () => {
                 </DependantInput>
 
                 <DateInput
-                    source="published_at"
+                    source="published"
                     defaultValue={dateDefaultValue}
                 />
                 <BooleanInput source="commentable" defaultValue />
