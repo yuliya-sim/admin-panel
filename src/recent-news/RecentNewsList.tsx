@@ -31,7 +31,7 @@ const RecentNewsGrid = () => {
   return (
     <Grid spacing={2} container>
       {data.map((record) => (
-        <Grid item key={record.id} sm={12}>
+        <Grid item key={record.id} sm={12} md={10} lg={8}>
           <Card
             sx={{
               height: "100%",
