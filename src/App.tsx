@@ -13,9 +13,10 @@ import "./App.css";
 import tags from "./tags";
 import posts from "./posts";
 import users from "./users";
-import events from './events';
+import events from "./events";
 import Dashboard from "./dashboard/Dashboard";
 import recentNews from "./recent-news";
+import archivedNews from "./archived-news";
 import analytics from "./analytics";
 
 export const App = () => (
@@ -39,6 +40,13 @@ export const App = () => (
         label: "Recent News",
       }}
       {...recentNews}
+    />
+    <Resource
+      name="archived-news"
+      options={{
+        label: "Archived News",
+      }}
+      {...archivedNews}
     />
     <Resource name="posts" {...posts} />
     <Resource name="comments" {...comments} />
