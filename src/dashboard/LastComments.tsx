@@ -1,14 +1,23 @@
-import CardHeader from "@material-ui/core/CardHeader";
 import { CardActions, CardContent, Grid } from "@mui/material";
-import Card from "@material-ui/core/Card";
-import data from '../data';
-import { useMemo } from "react";
 import { Link } from "@material-ui/core";
+import CardHeader from "@material-ui/core/CardHeader";
+
+import Card from "@material-ui/core/Card";
+import {
+    useGetList,
+
+} from 'react-admin';
 
 export const LastComments = () => {
-    const resentComments = useMemo(() => {
-        return data.comments.slice(-3)
-    }, [data])
+    let resentComments
+    const data = useGetList('comments');
+    if (data) {
+        resentComments = data.data;
+    }
+
+    if (!resentComments) {
+        return <div>Loading...</div>;
+    }
 
     return <Card style={{ marginBottom: 20 }}>
         <CardHeader title="Last comments" />
@@ -17,7 +26,7 @@ export const LastComments = () => {
                 return <Card key={crypto.randomUUID()}>
                     <CardHeader title={el.author.name} />
                     <CardContent>{el.body}</CardContent>
-                    <CardActions><Link>Go to post</Link></CardActions>
+                    <CardActions><Link>Go to post {el.post}</Link></CardActions>
                 </Card>
             })}
         </Grid>
