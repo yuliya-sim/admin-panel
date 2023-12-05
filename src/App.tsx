@@ -45,12 +45,16 @@ export const App = () => (
       }}
       {...recentNews}
     />
+    <Resource name="events" {...events} />
+    <Resource name="contacts" {...contacts} />
+    <Resource name="fundingData" options={{label: 'Funding Data' }} {...inProgress} />
     <Resource name="posts" {...posts} />
     <Resource name="comments" {...comments} />
-    <Resource name="tags" {...tags} />
-    <Resource name="events" {...events} />
-    <Resource name="analytics" {...analytics} />
     <Resource name="deals" {...deals} />
+    <Resource name="tags" {...tags} />
+    <Resource name="marketScans" options={{label: 'Market Scans' }} {...inProgress}  />
+    <Resource name="memberList" options={{label: 'MList' }} {...inProgress}  />
+    <Resource name="analytics" {...analytics} />
     <Resource name="contactUs" options={{
       label: "Contact Us",
     }} {...contactUs} />
