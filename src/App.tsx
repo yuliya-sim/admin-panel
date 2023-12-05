@@ -1,19 +1,20 @@
-import { Admin, Resource, CustomRoutes } from 'react-admin'; // eslint-disable-line import/no-unresolved
-import { Route } from 'react-router-dom';
+import { Admin, Resource, CustomRoutes } from "react-admin"; // eslint-disable-line import/no-unresolved
+import { Route } from "react-router-dom";
 
-import authProvider from './authProvider';
-import comments from './comments';
-import CustomRouteLayout from './customRouteLayout';
-import CustomRouteNoLayout from './customRouteNoLayout';
-import dataProvider from './dataProvider';
-import i18nProvider from './i18nProvider';
-import Layout from './Layout';
-import './App.css';
+import authProvider from "./authProvider";
+import comments from "./comments";
+import CustomRouteLayout from "./customRouteLayout";
+import CustomRouteNoLayout from "./customRouteNoLayout";
+import dataProvider from "./dataProvider";
+import i18nProvider from "./i18nProvider";
+import Layout from "./Layout";
+import "./App.css";
 
-import tags from './tags';
-import posts from './posts';
-import users from './users';
+import tags from "./tags";
+import posts from "./posts";
+import users from "./users";
 import Dashboard from "./dashboard/Dashboard";
+import recentNews from "./recent-news";
 import analytics from "./analytics";
 
 export const App = () => (
@@ -31,27 +32,30 @@ export const App = () => (
         element={<CustomRouteNoLayout title="Posts from /custom" />}
       />
     </CustomRoutes>
+    <Resource
+      name="recent-news"
+      options={{
+        label: "Recent News",
+      }}
+      {...recentNews}
+    />
     <Resource name="posts" {...posts} />
     <Resource name="comments" {...comments} />
     <Resource name="tags" {...tags} />
     <Resource name="analytics" {...analytics} />
-    {permissions => (
+    {(permissions) => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}
         <CustomRoutes noLayout>
           <Route
             path="/custom1"
-            element={
-              <CustomRouteNoLayout title="Posts from /custom1" />
-            }
+            element={<CustomRouteNoLayout title="Posts from /custom1" />}
           />
         </CustomRoutes>
         <CustomRoutes>
           <Route
             path="/custom2"
-            element={
-              <CustomRouteLayout title="Posts from /custom2" />
-            }
+            element={<CustomRouteLayout title="Posts from /custom2" />}
           />
         </CustomRoutes>
       </>
