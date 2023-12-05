@@ -20,6 +20,7 @@ import archivedNews from "./archived-news";
 import analytics from "./analytics";
 import contacts from "./contacts";
 import contactUs from "./contactUs";
+import inProgress from "./inProgress";
 
 export const App = () => (
   <Admin
@@ -50,12 +51,15 @@ export const App = () => (
       }}
       {...archivedNews}
     />
+    <Resource name="events" {...events} />
+    <Resource name="contacts" {...contacts} />
+    <Resource name="fundingData" options={{label: 'Funding Data' }} {...inProgress} />
     <Resource name="posts" {...posts} />
     <Resource name="comments" {...comments} />
     <Resource name="tags" {...tags} />
-    <Resource name="events" {...events} />
+    <Resource name="marketScans" options={{label: 'Market Scans' }} {...inProgress}  />
+    <Resource name="memberList" options={{label: 'Member List' }} {...inProgress}  />
     <Resource name="analytics" {...analytics} />
-    <Resource name="contacts" {...contacts} />
     <Resource name="contactUs" options={{
       label: "Contact Us",
     }} {...contactUs} />
