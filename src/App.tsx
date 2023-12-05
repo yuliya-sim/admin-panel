@@ -13,6 +13,7 @@ import './App.css';
 import tags from './tags';
 import posts from './posts';
 import users from './users';
+import events from './events';
 import Dashboard from "./dashboard/Dashboard";
 
 export const App = () => (
@@ -33,6 +34,7 @@ export const App = () => (
     <Resource name="posts" {...posts} />
     <Resource name="comments" {...comments} />
     <Resource name="tags" {...tags} />
+    <Resource name="events" {...events} />
     {permissions => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}
