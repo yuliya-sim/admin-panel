@@ -13,10 +13,14 @@ import "./App.css";
 import tags from "./tags";
 import posts from "./posts";
 import users from "./users";
-import events from './events';
+import events from "./events";
 import Dashboard from "./dashboard/Dashboard";
 import recentNews from "./recent-news";
+import archivedNews from "./archived-news";
 import analytics from "./analytics";
+import contacts from "./contacts";
+import contactUs from "./contactUs";
+import inProgress from "./inProgress";
 import deals from "./deals";
 
 export const App = () => (
@@ -47,6 +51,9 @@ export const App = () => (
     <Resource name="events" {...events} />
     <Resource name="analytics" {...analytics} />
     <Resource name="deals" {...deals} />
+    <Resource name="contactUs" options={{
+      label: "Contact Us",
+    }} {...contactUs} />
     {(permissions) => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}
