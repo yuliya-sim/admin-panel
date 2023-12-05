@@ -9,6 +9,7 @@ import {
     XAxis,
     YAxis
 } from "recharts";
+import {Title} from "react-admin";
 
 const data = [
     {
@@ -77,53 +78,56 @@ const data = [
 ];
 
 export const AnalyticsPage = () => {
-    return <Card style={{marginTop: 20}}>
-        <CardHeader title={'Analytics'}/>
-        <div style={{width: '100%'}}>
-            <h3 style={{textAlign: 'center', marginBottom: 20}}>Overview</h3>
-            <Grid container width={'100%'} justifyContent={'space-around'} style={{textAlign: 'center'}}>
-                <div>
-                    <div>Total UV:</div>
-                    <div>20347</div>
-                </div>
-                <div>
-                    <div>Total PV:</div>
-                    <div>15332</div>
-                </div>
-                <div>
-                    <div>Total AMT:</div>
-                    <div>12040</div>
-                </div>
-                <div>
-                    <div>Total CNT:</div>
-                    <div>5349</div>
-                </div>
-            </Grid>
-        </div>
-        <div style={{height: 500}}>
-            <ResponsiveContainer width="100%" height="100%">
-                <ComposedChart
-                    width={500}
-                    height={400}
-                    data={data}
-                    margin={{
-                        top: 20,
-                        right: 20,
-                        bottom: 20,
-                        left: 20,
-                    }}
-                >
-                    <CartesianGrid stroke="#f5f5f5"/>
-                    <XAxis dataKey="name" scale="band"/>
-                    <YAxis/>
-                    <Tooltip/>
-                    <Legend/>
-                    <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8"/>
-                    <Bar dataKey="pv" barSize={20} fill="#413ea0"/>
-                    <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
-                    <Scatter dataKey="cnt" fill="red"/>
-                </ComposedChart>
-            </ResponsiveContainer>
-        </div>
-    </Card>
+    return <>
+        <Title defaultTitle={'Analytics'}/>
+        <Card style={{marginTop: 20}}>
+            <CardHeader title={'Analytics'}/>
+            <div style={{width: '100%'}}>
+                <h3 style={{textAlign: 'center', marginBottom: 20}}>Overview</h3>
+                <Grid container width={'100%'} justifyContent={'space-around'} style={{textAlign: 'center'}}>
+                    <div>
+                        <div>Total UV:</div>
+                        <div>20347</div>
+                    </div>
+                    <div>
+                        <div>Total PV:</div>
+                        <div>15332</div>
+                    </div>
+                    <div>
+                        <div>Total AMT:</div>
+                        <div>12040</div>
+                    </div>
+                    <div>
+                        <div>Total CNT:</div>
+                        <div>5349</div>
+                    </div>
+                </Grid>
+            </div>
+            <div style={{height: 500}}>
+                <ResponsiveContainer width="100%" height="100%">
+                    <ComposedChart
+                        width={500}
+                        height={400}
+                        data={data}
+                        margin={{
+                            top: 20,
+                            right: 20,
+                            bottom: 20,
+                            left: 20,
+                        }}
+                    >
+                        <CartesianGrid stroke="#f5f5f5"/>
+                        <XAxis dataKey="name" scale="band"/>
+                        <YAxis/>
+                        <Tooltip/>
+                        <Legend/>
+                        <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8"/>
+                        <Bar dataKey="pv" barSize={20} fill="#413ea0"/>
+                        <Line type="monotone" dataKey="uv" stroke="#ff7300"/>
+                        <Scatter dataKey="cnt" fill="red"/>
+                    </ComposedChart>
+                </ResponsiveContainer>
+            </div>
+        </Card>
+    </>
 }

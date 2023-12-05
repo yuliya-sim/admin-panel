@@ -16,6 +16,7 @@ import users from "./users";
 import Dashboard from "./dashboard/Dashboard";
 import recentNews from "./recent-news";
 import analytics from "./analytics";
+import contacts from "./contacts";
 
 export const App = () => (
   <Admin
@@ -43,6 +44,7 @@ export const App = () => (
     <Resource name="comments" {...comments} />
     <Resource name="tags" {...tags} />
     <Resource name="analytics" {...analytics} />
+    <Resource name="contacts" {...contacts} />
     {(permissions) => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}

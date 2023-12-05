@@ -3,5 +3,6 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 
 export default  {
     list: AnalyticsPage,
-    icon: AnalyticsIcon
+    icon: AnalyticsIcon,
+    recordRepresentation: "title",
 }
