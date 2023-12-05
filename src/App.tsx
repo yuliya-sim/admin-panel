@@ -58,7 +58,7 @@ export const App = () => (
     <Resource name="comments" {...comments} />
     <Resource name="tags" {...tags} />
     <Resource name="marketScans" options={{label: 'Market Scans' }} {...inProgress}  />
-    <Resource name="memberList" options={{label: 'Member List' }} {...inProgress}  />
+    <Resource name="memberList" options={{label: 'MList' }} {...inProgress}  />
     <Resource name="analytics" {...analytics} />
     <Resource name="contactUs" options={{
       label: "Contact Us",
