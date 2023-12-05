@@ -9,8 +9,6 @@ import {
     XAxis,
     YAxis
 } from "recharts";
-import '../app.css';
-
 
 const data = [
     {
