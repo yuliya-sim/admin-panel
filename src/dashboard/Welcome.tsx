@@ -2,7 +2,7 @@ import { Box, Card, CardActions, Typography } from "@mui/material";
 
 import { useTranslate } from "react-admin";
 
-import publishArticleImage from "./welcome_illustration.svg";
+import chLogo from "./ch-logo.png";
 
 const Welcome = () => {
   const translate = useTranslate();
@@ -39,16 +39,7 @@ const Welcome = () => {
             }}
           ></CardActions>
         </Box>
-        <Box
-          display={{ xs: "none", sm: "none", md: "block" }}
-          sx={{
-            background: `url(${publishArticleImage}) top right / cover`,
-            marginLeft: "auto",
-          }}
-          width="16em"
-          height="9em"
-          overflow="hidden"
-        />
+          <img src={chLogo} alt={'logo'}/>
       </Box>
     </Card>
   );
