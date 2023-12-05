@@ -1,15 +1,23 @@
-import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
-import data from '../data';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {
+    useGetList,
+
+} from 'react-admin';
+
 
 export default () => {
-
+    let chartData
+    const data = useGetList('posts');
+    if (data) {
+        chartData = data.data?.sort((a, b) => a.id - b.id)
+    }
     return (
         <>
-            <h4 style={{textAlign: 'center'}}>Posts views</h4>
+            <h4 style={{ textAlign: 'center' }}>Posts views</h4>
             <LineChart
                 width={500}
                 height={300}
-                data={data.posts}
+                data={chartData}
                 margin={{
                     top: 5,
                     right: 30,
@@ -17,12 +25,12 @@ export default () => {
                     bottom: 5,
                 }}
             >
-                <CartesianGrid strokeDasharray="3 3"/>
-                <XAxis dataKey="id"/>
-                <YAxis/>
-                <Tooltip/>
-                <Legend/>
-                <Line type="monotone" dataKey="views" stroke="#82ca9d"/>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="id" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="views" stroke="#82ca9d" />
             </LineChart>
         </>
     );
