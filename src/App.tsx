@@ -17,6 +17,7 @@ import events from './events';
 import Dashboard from "./dashboard/Dashboard";
 import recentNews from "./recent-news";
 import analytics from "./analytics";
+import deals from "./deals";
 
 export const App = () => (
   <Admin
@@ -45,6 +46,7 @@ export const App = () => (
     <Resource name="tags" {...tags} />
     <Resource name="events" {...events} />
     <Resource name="analytics" {...analytics} />
+    <Resource name="deals" {...deals} />
     {(permissions) => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}
