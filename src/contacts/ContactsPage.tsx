@@ -26,7 +26,7 @@ export const ContactsPage = () => {
         <Title defaultTitle={'Contacts'}/>
         <Card style={{marginTop: 20}}>
             <CardHeader title={'Contacts'}/>
-            <TableContainer component={Paper} style={{margin: '10px 20px', width: 'auto'}}>
+            <TableContainer style={{margin: '10px 20px', width: 'auto'}}>
                 <Table>
                     <TableHead>
                         <TableRow>
