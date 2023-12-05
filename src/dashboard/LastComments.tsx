@@ -9,7 +9,7 @@ export const LastComments = () => {
   let resentComments;
   const data = useGetList("comments");
   if (data) {
-    resentComments = data.data;
+    resentComments = data.data?.slice(-3) ?? [] ;
   }
 
   if (!resentComments) {
@@ -22,7 +22,7 @@ export const LastComments = () => {
       <Grid container={true} gap={"10px"}>
         {resentComments.map((el) => {
           return (
-            <Card key={el.id}>
+            <Card key={el.id} style={{marginInlineStart: '16px'}}>
               <CardHeader title={el.author.name} />
               <CardContent>{el.body}</CardContent>
               <CardActions>
