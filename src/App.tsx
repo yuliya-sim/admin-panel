@@ -19,6 +19,7 @@ import recentNews from "./recent-news";
 import archivedNews from "./archived-news";
 import analytics from "./analytics";
 import contacts from "./contacts";
+import contactUs from "./contactUs";
 
 export const App = () => (
   <Admin
@@ -55,6 +56,9 @@ export const App = () => (
     <Resource name="events" {...events} />
     <Resource name="analytics" {...analytics} />
     <Resource name="contacts" {...contacts} />
+    <Resource name="contactUs" options={{
+      label: "Contact Us",
+    }} {...contactUs} />
     {(permissions) => (
       <>
         {permissions ? <Resource name="users" {...users} /> : null}
